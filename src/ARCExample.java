@@ -13,18 +13,18 @@ public class ARCExample {
 		int turn = 1;
 		
 		
-		//«Ø¥ßSINK ©M ARC NODE
+		//ï¿½Ø¥ï¿½SINK ï¿½M ARC NODE
 		Sink sink = new Sink(Rc1,Rc2);
-		RS nodes[] = new RS[1000];
+		ARCNode nodes[] = new ARCNode[1000];
 		
-		//­ì©lª©¥»
+		//ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½ï¿½
 		for(int i=0;i<nodes.length;i++){
 			nodes[i] = new RS(l*Math.random(),l*Math.random(),Rs,Rc1,Rc2,P,C0,i,l,l,nodes.length,bit);
 			nodes[i].self = nodes[i];
 			nodes[i].power.owner = nodes[i];
 		}
 
-		//«Ø¥ß¾FªñÃö«Y
+		//ï¿½Ø¥ß¾Fï¿½ï¿½ï¿½ï¿½ï¿½Y
 		sink.ALLNodes = nodes;
 		sink.searchNeighborNode();
 		for(int i=0;i<nodes.length;i++){
